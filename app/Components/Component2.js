@@ -4,12 +4,16 @@ import {
   Text,
   View,
   StyleSheet,
-  TouchableHighlight
+  TouchableHighlight,
+  TouchableOpacity
 } from "react-native";
 
 export default class component2 extends Component {
   handlePress() {
     console.log("Area Pressed");
+  }
+  handleOpacity() {
+    console.log("Opacity Pressed");
   }
   render() {
     console.log("HELLO WORLD");
@@ -31,9 +35,11 @@ export default class component2 extends Component {
               <Text>V1</Text>
             </View>
           </TouchableHighlight>
-          <View style={styles.v2}>
-            <Text>v2</Text>
-          </View>
+          <TouchableOpacity style={styles.v2} onPress={this.handleOpacity}>
+            <View>
+              <Text>v2</Text>
+            </View>
+          </TouchableOpacity>
           <View style={styles.v3}>
             <Text>v3</Text>
           </View>
